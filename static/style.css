@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;  /* dark blue */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Strength Bar Container */
+.strength-bar {
+    width: 100%;
+    height: 12px;
+    background: #334155;
+    border-radius: 6px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+/* Base fill */
+.strength-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+/* Weak */
+.strength-fill.weak {
+    width: 33%;
+    background: #ef4444;
+}
+
+/* Medium */
+.strength-fill.medium {
+    width: 66%;
+    background: #eab308;
+}
+
+/* Strong */
+.strength-fill.strong {
+    width: 100%;
+    background: #22c55e;
+}
