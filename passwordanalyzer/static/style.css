@@ -1,44 +1,86 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #0f172a;  /* dark blue */
-    color: white;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-/* Strength Bar Container */
+/* App container */
+.app-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Card UI */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Input */
+input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+button {
+    width: 95%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #2a5298;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e3c72;
+}
+
+/* Result section */
+.result {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Strength bar */
 .strength-bar {
     width: 100%;
-    height: 12px;
-    background: #334155;
-    border-radius: 6px;
+    height: 10px;
+    background: #eee;
+    border-radius: 10px;
     margin: 10px 0;
-    overflow: hidden;
 }
 
-/* Base fill */
 .strength-fill {
     height: 100%;
-    width: 0%;
-    transition: width 0.5s ease;
+    border-radius: 10px;
 }
 
-/* Weak */
-.strength-fill.weak {
+/* Colors */
+.weak {
     width: 33%;
-    background: #ef4444;
+    background: red;
 }
 
-/* Medium */
-.strength-fill.medium {
+.medium {
     width: 66%;
-    background: #eab308;
+    background: orange;
 }
 
-/* Strong */
-.strength-fill.strong {
+.strong {
     width: 100%;
-    background: #22c55e;
+    background: green;
 }

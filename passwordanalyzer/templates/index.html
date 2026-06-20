@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Password Security Analyzer</title>
+    <title>Password Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<div class="container">
-    <h1>Password Security Analyzer 🔐</h1>
+<div class="app-container">
+    <div class="card">
+        <h1>🔐 Password Analyzer</h1>
 
-    <form method="POST">
-        <input type="text" name="password" placeholder="Enter password..." required>
-        <button type="submit">Analyze</button>
-    </form>
+        <form method="POST">
+            <input type="password" name="password" placeholder="Enter password..." required>
+            <button type="submit">Analyze</button>
+        </form>
 
-    {% if result %}
+        {% if result %}
         <div class="result">
-            <h2>Score: {{ result.score }}/6</h2>
-
+            <h2>{{ result.strength }} ({{ result.score }}/6)</h2>
 
             <div class="strength-bar">
-    <div class="strength-fill {{ result.strength }}"></div>
-</div>
+                <div class="strength-fill {{ result.strength }}"></div>
+            </div>
+
             <p><strong>Crack Time:</strong> {{ result.crack_time }}</p>
 
-            <h3>Suggestions:</h3>
             <ul>
                 {% for item in result.feedback %}
                     <li>{{ item }}</li>
                 {% endfor %}
             </ul>
         </div>
-    {% endif %}
+        {% endif %}
+    </div>
 </div>
-
 
 </body>
 </html>
