@@ -11,6 +11,14 @@
     <div class="card">
         <h1>🔐 Password Analyzer</h1>
 
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+    <span style="font-size:14px;">🌙 Dark Mode</span>
+    <label class="switch">
+        <input type="checkbox" onclick="toggleDarkMode()" id="darkToggle">
+        <span class="slider"></span>
+    </label>
+</div>
+
         <form method="POST" onsubmit="showLoading()">
             <input type="password" name="password" placeholder="Enter password..." required>
 
@@ -56,6 +64,31 @@ function togglePassword() {
 function showLoading() {
     document.getElementById("loading").style.display = "block";
 }
+</script>
+
+<script>
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark");
+
+    // Save preference
+    if (body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+}
+
+// Load saved theme
+window.onload = function () {
+    const savedTheme = localStorage.getItem("theme");
+    const toggle = document.getElementById("darkToggle");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        toggle.checked = true;
+    }
+};
 </script>
 
 </body>
