@@ -1,86 +1,132 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", sans-serif;
+    background: #f2f2f7;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-/* App container */
+/* iPhone container feel */
 .app-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 375px;
+    padding: 15px;
 }
 
-/* Card UI */
+/* Card */
 .card {
     background: white;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Title */
+h1 {
+    font-size: 22px;
+    font-weight: 600;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 /* Input */
 input {
-    width: 90%;
-    padding: 12px;
-    margin-top: 15px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    background: #f2f2f7;
+    font-size: 16px;
+    outline: none;
+    margin-top: 10px;
 }
 
 /* Button */
 button {
-    width: 95%;
-    padding: 12px;
-    margin-top: 10px;
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
     border: none;
-    border-radius: 10px;
-    background: #2a5298;
+    border-radius: 14px;
+    background: #007AFF;
     color: white;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover {
-    background: #1e3c72;
+    background: #005ecb;
 }
 
 /* Result section */
 .result {
     margin-top: 20px;
-    text-align: left;
 }
 
-/* Strength bar */
+/* Strength label */
+.result h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* iOS-style strength bar */
 .strength-bar {
     width: 100%;
-    height: 10px;
-    background: #eee;
+    height: 8px;
+    background: #e5e5ea;
     border-radius: 10px;
-    margin: 10px 0;
-}
-
-.strength-fill {
-    height: 100%;
-    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
 
 /* Colors */
 .weak {
     width: 33%;
-    background: red;
+    background: #ff3b30;
 }
 
 .medium {
     width: 66%;
-    background: orange;
+    background: #ff9500;
 }
 
 .strong {
     width: 100%;
-    background: green;
+    background: #34c759;
+}
+
+/* Feedback list */
+ul {
+    padding-left: 18px;
+    color: #555;
+}
+
+li {
+    margin-bottom: 5px;
+}
+/* Smooth strength animation */
+.strength-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Spinner */
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid #e5e5ea;
+    border-top: 4px solid #007AFF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }

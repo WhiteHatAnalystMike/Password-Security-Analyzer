@@ -11,10 +11,21 @@
     <div class="card">
         <h1>🔐 Password Analyzer</h1>
 
-        <form method="POST">
+        <form method="POST" onsubmit="showLoading()">
             <input type="password" name="password" placeholder="Enter password..." required>
+
+            <label style="font-size: 14px; display: flex; align-items: center; gap: 6px; margin-top: 8px;">
+                <input type="checkbox" onclick="togglePassword()"> Show Password
+            </label>
+
             <button type="submit">Analyze</button>
         </form>
+
+        <!-- Loading Spinner -->
+        <div id="loading" style="display:none; text-align:center; margin-top:15px;">
+            <div class="spinner"></div>
+            <p style="font-size:14px; color:#555;">Analyzing...</p>
+        </div>
 
         {% if result %}
         <div class="result">
@@ -35,6 +46,17 @@
         {% endif %}
     </div>
 </div>
+
+<script>
+function togglePassword() {
+    const input = document.querySelector('input[name="password"]');
+    input.type = input.type === "password" ? "text" : "password";
+}
+
+function showLoading() {
+    document.getElementById("loading").style.display = "block";
+}
+</script>
 
 </body>
 </html>
