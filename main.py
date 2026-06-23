@@ -14,11 +14,11 @@ def home():
         crack_time_seconds = estimate_crack_time(password)
 
         if score >= 5:
-            strength = "strong"
+            strength = "Strong"
         elif score >= 3:
-            strength = "medium"
+            strength = "Medium"
         else:
-            strength = "weak"
+            strength = "Weak"
 
         result = {
             "score": score,
@@ -29,5 +29,7 @@ def home():
 
     return render_template("index.html", result=result)
 
+import os
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
