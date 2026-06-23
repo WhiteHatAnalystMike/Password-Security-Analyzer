@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="card">
+        <h1>🔐 Password Analyzer</h1>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+    <span style="font-size:14px;">🌙 Dark Mode</span>
+    <label class="switch">
+        <input type="checkbox" onclick="toggleDarkMode()" id="darkToggle">
+        <span class="slider"></span>
+    </label>
+</div>
+
+        <form method="POST" onsubmit="showLoading()">
+            <input type="password" name="password" placeholder="Enter password..." required>
+
+            <div class="toggle-row">
+    <span>Show Password</span>
+    <label class="switch">
+        <input type="checkbox" onclick="togglePassword()">
+        <span class="slider"></span>
+    </label>
+    </div>
+
+            <button type="submit">Analyze</button>
+        </form>
+
+        <!-- Loading Spinner -->
+        <div id="loading" style="display:none; text-align:center; margin-top:15px;">
+            <div class="spinner"></div>
+            <p style="font-size:14px; color:#555;">Analyzing...</p>
+        </div>
+
+        {% if result %}
+        <div class="result">
+            <h2>{{ result.strength }} ({{ result.score }}/6)</h2>
+
+            <div class="strength-bar">
+                <div class="strength-fill {{ result.strength }}"></div>
+            </div>
+
+            <p><strong>Crack Time:</strong> {{ result.crack_time }}</p>
+
+            <ul>
+                {% for item in result.feedback %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+function togglePassword() {
+    const input = document.querySelector('input[name="password"]');
+    input.type = input.type === "password" ? "text" : "password";
+}
+
+function showLoading() {
+    document.getElementById("loading").style.display = "block";
+}
+</script>
+
+<script>
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark");
+
+    // Save preference
+    if (body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+}
+
+// Load saved theme
+window.onload = function () {
+    const savedTheme = localStorage.getItem("theme");
+    const toggle = document.getElementById("darkToggle");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        toggle.checked = true;
+    }
+};
+</script>
+
+</body>
+</html>
