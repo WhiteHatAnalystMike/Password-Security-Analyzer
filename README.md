@@ -128,9 +128,10 @@ http://127.0.0.1:5000
 
 ---
 
-## 📸 Demo Preview
+## 📸 Demo
 
-https://youtu.be/7wIq1yjOJSA
+🎥 Watch the demo here:  
+(https://youtu.be/7wIq1yjOJSA?si=fK0adKAKrKZuwbIT)
 
 ---
 
