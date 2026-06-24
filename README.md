@@ -159,7 +159,7 @@ Key deployment considerations:
 ## 👤 Author
 
 **Michael Koranteng**
-Computer Science Student | Aspiring Cybersecurity Engineer
+Computer Science Student | Aspiring Cybersecurity Analyst
 
 ---
 
