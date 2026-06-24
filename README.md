@@ -3,6 +3,7 @@
 > A production-ready web application that analyzes password strength, estimates crack time, and provides actionable security feedback — built with a mobile-first, iOS-inspired interface.
 
 🌐 **Live Demo:** https://password-analyzer-yoap.onrender.com/
+
 📦 **Repository:** https://github.com/WhiteHatAnalystMike/Password-Security-Analyzer
 
 ---
@@ -170,6 +171,7 @@ Key deployment considerations:
 ## 👤 Author
 
 **Michael Koranteng**
+
 Computer Science Student | Aspiring Cybersecurity Analyst
 
 ---
