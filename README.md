@@ -29,10 +29,10 @@ This project emphasizes both **cybersecurity fundamentals** and **modern UI/UX d
 
 ## 🧠 Engineering Highlights
 
-* Designed a **rule-based scoring algorithm** to evaluate password strength
-* Implemented **secure handling of user input** (no storage of sensitive data)
-* Built a **responsive UI system** mimicking native iOS design patterns
-* Integrated **state persistence** using `localStorage` for theme preference
+* Designed and implemented a **rule-based password strength scoring algorithm** evaluating length, character diversity, and complexity
+* Modeled **estimated brute-force crack times** based on password strength
+* Built a **responsive, mobile-first UI** mimicking native iOS design patterns
+* Implemented **client-side state persistence** using `localStorage` for theme preference
 * Structured application using **modular Flask architecture**
 
 ---
@@ -53,12 +53,12 @@ Rendered UI (Jinja Templates)
 
 ## 🛠️ Tech Stack
 
-| Layer      | Technology                          |
-| ---------- | ----------------------------------- |
-| Backend    | Python, Flask                       |
-| Frontend   | HTML, CSS (Custom iOS-style design) |
-| Deployment | Render                              |
-| Versioning | Git & GitHub                        |
+| Layer      | Technology               |
+| ---------- | ------------------------ |
+| Backend    | Python, Flask            |
+| Frontend   | HTML, CSS (iOS-style UI) |
+| Deployment | Render                   |
+| Versioning | Git & GitHub             |
 
 ---
 
@@ -127,10 +127,21 @@ http://127.0.0.1:5000
 
 ---
 
+## 📸 Screenshots
+
+*(Add screenshots here for maximum impact)*
+
+```text
+screenshots/light.png
+screenshots/dark.png
+```
+
+---
+
 ## 📸 Demo
 
-🎥 Watch the demo here:  
-(https://youtu.be/7wIq1yjOJSA?si=fK0adKAKrKZuwbIT)
+🎥 Watch the demo here:
+https://youtu.be/7wIq1yjOJSA
 
 ---
 
@@ -163,6 +174,15 @@ Computer Science Student | Aspiring Cybersecurity Analyst
 
 ---
 
+## 💼 Resume Highlights
+
+* Built and deployed a **full-stack password security analyzer** using Flask and custom scoring algorithms
+* Implemented **real-time password evaluation** with crack-time estimation and actionable feedback
+* Designed a **mobile-first, iOS-inspired UI** with dark mode and persistent user preferences
+* Deployed a **production-ready web application** on Render with proper environment configuration
+
+---
+
 ## ⭐️ Impact
 
 This project demonstrates:
@@ -182,3 +202,4 @@ This tool bridges the gap between **technical security concepts** and **user-fri
 ---
 
 ⭐️ If you found this useful, consider starring the repository.
+
