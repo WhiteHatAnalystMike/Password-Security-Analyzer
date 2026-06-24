@@ -76,7 +76,6 @@ Password-Security-Analyzer/
 │   │   └── style.css    # iOS-style UI styling
 │
 ├── requirements.txt
-├── .gitignore
 └── README.md
 ```
 
