@@ -48,6 +48,14 @@
             </div>
 
             <p><strong>Crack Time:</strong> {{ result.crack_time }}</p>
+            {% if result.breach_count > 0 %}
+            <p style="color:#ff3b30;">
+            ⚠️ Found in {{ result.breach_count }} known data breaches</p> 
+            {% else %}
+            <p style="color:#34c759;">
+            ✅ Not found in known breaches
+            </p>
+            {% endif %}
 
             <ul>
                 {% for item in result.feedback %}

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from analyzer import analyze_password, estimate_crack_time, format_time
+from breach_checker import check_breach
 
 app = Flask(__name__)
 
@@ -12,19 +13,23 @@ def home():
 
         score, feedback = analyze_password(password)
         crack_time_seconds = estimate_crack_time(password)
+        score, feedback = analyze_password(password)
+        crack_time_seconds = estimate_crack_time(password)
+        breach_count = check_breach(password)
 
         if score >= 5:
-            strength = "strong"
+            strength = "Strong"
         elif score >= 3:
-            strength = "medium"
+            strength = "Medium"
         else:
-            strength = "weak"
+            strength = "Weak"
 
         result = {
             "score": score,
             "feedback": feedback,
             "crack_time": format_time(crack_time_seconds),
-            "strength": strength
+            "strength": strength,
+            "breach_count": breach_count
         }
 
     return render_template("index.html", result=result)
