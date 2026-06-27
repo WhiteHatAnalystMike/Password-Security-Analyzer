@@ -4,6 +4,7 @@ from breach_checker import check_breach
 
 app = Flask(__name__)
 
+# Home route to handle password analysis and breach checking
 @app.route("/", methods=["GET", "POST"])
 def home():
     result = None
@@ -32,9 +33,9 @@ def home():
             "breach_count": breach_count
         }
 
-    return render_template("index.html", result=result)
+    return render_template("index.html", result=result) # Render the index.html template with the result dictionary
 
 import os
-
+# Run the Flask application
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
