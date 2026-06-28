@@ -17,13 +17,6 @@ Weak passwords continue to be one of the most common causes of compromised accou
 While building this application, I focused on writing clean, organized code, integrating external APIs, and creating an interface that is both responsive and easy to use.
 
 ---
-# Overview
-
-Weak passwords continue to be one of the most common causes of compromised accounts. The goal of this project is to help users better understand the security of their passwords by providing real-time analysis, estimating how long a password would take to crack, and checking whether it has appeared in publicly known data breaches.
-
-While building this application, I focused on writing clean, organized code, integrating external APIs, and creating an interface that is both responsive and easy to use.
-
----
 
 # 📸 Application Preview
 
