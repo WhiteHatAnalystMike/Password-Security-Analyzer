@@ -17,6 +17,49 @@ Weak passwords continue to be one of the most common causes of compromised accou
 While building this application, I focused on writing clean, organized code, integrating external APIs, and creating an interface that is both responsive and easy to use.
 
 ---
+# Overview
+
+Weak passwords continue to be one of the most common causes of compromised accounts. The goal of this project is to help users better understand the security of their passwords by providing real-time analysis, estimating how long a password would take to crack, and checking whether it has appeared in publicly known data breaches.
+
+While building this application, I focused on writing clean, organized code, integrating external APIs, and creating an interface that is both responsive and easy to use.
+
+---
+
+# 📸 Application Preview
+
+## Home Screen (Light Mode)
+
+The application opens with a clean, mobile-friendly interface where users can enter a password, switch between light and dark mode, and begin an analysis.
+
+![Home Screen - Light](assets/screenshots/home-light.png)
+
+---
+
+## Home Screen (Dark Mode)
+
+The application also supports a persistent dark mode, allowing users to switch themes while maintaining the same responsive experience.
+
+![Home Screen - Dark](assets/screenshots/home-dark.png)
+
+---
+
+## Strong Password Analysis
+
+A strong password receives the highest security score, an estimated crack time, and confirmation that it has not appeared in known public data breaches.
+
+![Strong Password](assets/screenshots/strong-password-light.png)
+
+---
+
+## Breached Password Detection
+
+If a password has appeared in previous data breaches, the application alerts the user, displays the number of known breaches, and provides recommendations to improve password security.
+
+![Breached Password](assets/screenshots/breached-password-light.png)
+
+---
+
+# Features
 
 # Features
 
