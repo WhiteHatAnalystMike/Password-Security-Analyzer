@@ -54,8 +54,6 @@ If a password has appeared in previous data breaches, the application alerts the
 
 # Features
 
-# Features
-
 * Password strength analysis
 * Password crack-time estimation
 * Have I Been Pwned (HIBP) breach detection
