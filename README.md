@@ -194,6 +194,17 @@ Some features I plan to add include:
 
 ---
 
+# Deployment
+
+The application is deployed on Render and is publicly accessible through the live demo link above. Deployment includes:
+
+- Flask production configuration
+- Dependency management with `requirements.txt`
+- Environment-based configuration
+- Continuous version control with Git and GitHub
+
+---
+
 # About Me
 
 **Michael Koranteng**
