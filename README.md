@@ -58,7 +58,7 @@ If a password has appeared in previous data breaches, the application alerts the
 
 - 🔐 Analyze password strength
 - ⏱️ Estimate password crack time
-- 🌐 Detect breached passwords using the Have I Been Pwned (HIBP) API
+- 🌐 Detect breached passwords using the **Have I Been Pwned (HIBP) API**
 - 💡 Generate personalized security recommendations
 - 🌙 Toggle between Light and Dark Mode
 - 📱 Responsive interface for desktop and mobile devices
@@ -68,28 +68,29 @@ If a password has appeared in previous data breaches, the application alerts the
 
 # Technologies Used
 
-| Category        | Technology            |
-| --------------- | --------------------- |
-| Language        | Python                |
-| Framework       | Flask                 |
-| Frontend        | HTML, CSS, JavaScript |
-| API             | Have I Been Pwned API |
-| Deployment      | Render                |
-| Version Control | Git & GitHub          |
+| Category | Technology |
+|----------|------------|
+| Language | Python |
+| Framework | Flask |
+| Frontend | HTML, CSS, JavaScript |
+| API | Have I Been Pwned (HIBP) API |
+| Deployment | Render |
+| Version Control | Git & GitHub |
 
 ---
+
 # What I Learned
 
 Building this project gave me hands-on experience with:
 
-* Developing a full-stack web application using Flask
-* Organizing Python code into reusable modules
-* Integrating a third-party REST API (Have I Been Pwned)
-* Deploying a Python application with Render
-* Using Git and GitHub for version control and collaboration
-* Applying cybersecurity concepts to a real-world application
-* Designing a responsive user interface with HTML, CSS, and JavaScript
-* Debugging and solving real-world development challenges
+- Developing a full-stack web application using Flask
+- Organizing Python code into reusable modules
+- Integrating a third-party REST API (Have I Been Pwned)
+- Deploying a Python application with Render
+- Using Git and GitHub for version control
+- Applying cybersecurity concepts to a real-world application
+- Designing responsive user interfaces with HTML, CSS, and JavaScript
+- Debugging and solving real-world development challenges
 
 ---
 
@@ -115,7 +116,7 @@ Password-Security-Analyzer/
 │
 ├── analyzer.py           # Password strength analysis
 ├── breach_checker.py     # HIBP API integration
-├── main.py               # Flask application
+├── main.py               # Flask application entry point
 ├── requirements.txt      # Python dependencies
 ├── .gitignore
 └── README.md
@@ -123,7 +124,7 @@ Password-Security-Analyzer/
 
 ---
 
-# Running the Project
+# Getting Started
 
 Clone the repository:
 
@@ -151,7 +152,7 @@ Activate the virtual environment.
 .venv\Scripts\activate
 ```
 
-Install dependencies:
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -175,12 +176,26 @@ http://127.0.0.1:5000
 
 This project demonstrates several cybersecurity concepts, including:
 
-* Password strength evaluation
-* Password complexity analysis
-* Crack-time estimation
-* Secure handling of user input
-* Password breach detection using the Have I Been Pwned API
-* The HIBP k-Anonymity model, which allows passwords to be checked without transmitting the complete password
+- Password strength evaluation
+- Password complexity analysis
+- Password crack-time estimation
+- Secure handling of user input
+- Password breach detection using the Have I Been Pwned API
+- The HIBP k-Anonymity model, which allows passwords to be checked without transmitting the complete password
+
+---
+
+# Deployment
+
+The application is deployed on **Render** and is publicly accessible through the live demo link above.
+
+Deployment includes:
+
+- Flask production configuration
+- Dependency management with `requirements.txt`
+- Environment-based configuration
+- Git and GitHub version control
+- Cloud deployment using Render
 
 ---
 
@@ -188,22 +203,12 @@ This project demonstrates several cybersecurity concepts, including:
 
 Some features I plan to add include:
 
-* Secure password generator
-* Password entropy calculations
-* Password history comparison
-* Exportable security reports
-* Additional cybersecurity tools and utilities
-
----
-
-# Deployment
-
-The application is deployed on Render and is publicly accessible through the live demo link above. Deployment includes:
-
-- Flask production configuration
-- Dependency management with `requirements.txt`
-- Environment-based configuration
-- Continuous version control with Git and GitHub
+- 🔑 Secure password generator
+- 📊 Password entropy calculations
+- 📁 Exportable security reports
+- 📈 Password strength history
+- 🌍 Multi-language support
+- 🛡️ Additional cybersecurity tools and utilities
 
 ---
 
@@ -211,7 +216,7 @@ The application is deployed on Render and is publicly accessible through the liv
 
 **Michael Koranteng**
 
-Computer Science student at Towson University with an interest in cybersecurity, software engineering, and secure application development.
+Computer Science student at Towson University passionate about cybersecurity, software engineering, and building secure, user-focused applications.
 
 GitHub: https://github.com/WhiteHatAnalystMike
 
@@ -219,7 +224,8 @@ GitHub: https://github.com/WhiteHatAnalystMike
 
 # Why I Built This Project
 
-I built this application to improve my software development skills while learning more about password security and API integration. My goal was to create a practical cybersecurity tool that combines secure programming practices with a clean and user-friendly interface.
+This project was my first application built with **Python, JavaScript, and HTML**. My goal was to strengthen my software development skills while learning more about cybersecurity, API integration, and full-stack web development.
+
+Building this application challenged me to learn new technologies, solve real-world problems, and create a project that demonstrates both my technical skills and my interest in cybersecurity.
 
 If you have any suggestions or feedback, feel free to open an issue or reach out.
-
