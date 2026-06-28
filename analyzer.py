@@ -1,6 +1,7 @@
 import re
 import math
 
+# Analyze the password and provide a score and feedback
 def analyze_password(password):
     score = 0
     feedback = []
@@ -34,7 +35,7 @@ def analyze_password(password):
         
     return score, feedback
 
-
+# Estimate the time it would take to crack the password based on its complexity
 def estimate_crack_time(password):
     charset = 0
     
@@ -52,7 +53,7 @@ def estimate_crack_time(password):
     
     return combinations / guesses_per_second
 
-
+# Format the estimated crack time into a human-readable format
 def format_time(seconds):
     if seconds < 60:
         return f"{seconds:.2f} seconds"

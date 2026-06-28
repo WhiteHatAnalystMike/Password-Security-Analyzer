@@ -263,3 +263,11 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(18px);
 }
+.breach-warning {
+    background: rgba(255,59,48,0.12);
+    border-left: 4px solid #ff3b30;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 12px 0;
+    font-weight: 600;
+}
