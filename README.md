@@ -91,16 +91,25 @@ If a password has appeared in previous data breaches, the application alerts the
 ```text
 Password-Security-Analyzer/
 │
+├── assets/
+│   └── screenshots/
+│       ├── home-light.png
+│       ├── home-dark.png
+│       ├── strong-password-light.png
+│       ├── strong-password-dark.png
+│       ├── breached-password-light.png
+│       └── breached-password-dark.png
+│
 ├── static/
 │   └── style.css
 │
 ├── templates/
 │   └── index.html
 │
-├── analyzer.py
-├── breach_checker.py
-├── main.py
-├── requirements.txt
+├── analyzer.py           # Password strength analysis
+├── breach_checker.py     # HIBP API integration
+├── main.py               # Flask application
+├── requirements.txt      # Python dependencies
 ├── .gitignore
 └── README.md
 ```
