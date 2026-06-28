@@ -170,15 +170,17 @@ This project demonstrates several cybersecurity concepts, including:
 
 # What I Learned
 
-Developing this project gave me experience with:
+Building this project gave me hands-on experience with:
 
-* Building full-stack web applications using Flask
-* Organizing Python projects into reusable modules
-* Working with REST APIs
-* Deploying Python applications to Render
-* Using Git and GitHub for version control
-* Applying cybersecurity concepts in a practical application
-* Improving user experience through responsive web design
+* Developing a full-stack web application using Flask
+* Organizing Python code into reusable modules
+* Integrating a third-party REST API (Have I Been Pwned)
+* Deploying a Python application with Render
+* Using Git and GitHub for version control and collaboration
+* Applying cybersecurity concepts to a real-world application
+* Designing a responsive user interface with HTML, CSS, and JavaScript
+* Debugging and solving real-world development challenges
+
 
 ---
 
