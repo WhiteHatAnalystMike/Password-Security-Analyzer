@@ -2,7 +2,9 @@
 
 A Flask-based cybersecurity web application that analyzes password strength, estimates password crack time, and checks whether a password has appeared in known data breaches using the **Have I Been Pwned (HIBP) API**.
 
-I built this project to strengthen my Python, Flask, and cybersecurity skills while gaining experience designing, developing, and deploying a full-stack web application.
+Unlike a basic password checker, this application combines password strength analysis, crack-time estimation, and real-world breach detection into a single tool designed to help users make more informed security decisions.
+
+I built this project to strengthen my Python, Flask, and cybersecurity skills while gaining **hands-on experience** designing, developing, and deploying a full-stack web application.
 
 🌐 **Live Demo:** https://password-analyzer-yoap.onrender.com/
 
@@ -54,13 +56,13 @@ If a password has appeared in previous data breaches, the application alerts the
 
 # Features
 
-* Password strength analysis
-* Password crack-time estimation
-* Have I Been Pwned (HIBP) breach detection
-* Personalized security recommendations
-* Responsive design for desktop and mobile devices
-* Dark mode with saved user preferences
-* Fast Flask backend with dynamic page updates
+- 🔐 Analyze password strength
+- ⏱️ Estimate password crack time
+- 🌐 Detect breached passwords using the Have I Been Pwned (HIBP) API
+- 💡 Generate personalized security recommendations
+- 🌙 Toggle between Light and Dark Mode
+- 📱 Responsive interface for desktop and mobile devices
+- ⚡ Fast Flask backend with dynamic updates
 
 ---
 
@@ -74,6 +76,20 @@ If a password has appeared in previous data breaches, the application alerts the
 | API             | Have I Been Pwned API |
 | Deployment      | Render                |
 | Version Control | Git & GitHub          |
+
+---
+# What I Learned
+
+Building this project gave me hands-on experience with:
+
+* Developing a full-stack web application using Flask
+* Organizing Python code into reusable modules
+* Integrating a third-party REST API (Have I Been Pwned)
+* Deploying a Python application with Render
+* Using Git and GitHub for version control and collaboration
+* Applying cybersecurity concepts to a real-world application
+* Designing a responsive user interface with HTML, CSS, and JavaScript
+* Debugging and solving real-world development challenges
 
 ---
 
@@ -165,23 +181,6 @@ This project demonstrates several cybersecurity concepts, including:
 * Secure handling of user input
 * Password breach detection using the Have I Been Pwned API
 * The HIBP k-Anonymity model, which allows passwords to be checked without transmitting the complete password
-
----
-
-# What I Learned
-
-Building this project gave me hands-on experience with:
-
-* Developing a full-stack web application using Flask
-* Organizing Python code into reusable modules
-* Integrating a third-party REST API (Have I Been Pwned)
-* Deploying a Python application with Render
-* Using Git and GitHub for version control and collaboration
-* Applying cybersecurity concepts to a real-world application
-* Designing a responsive user interface with HTML, CSS, and JavaScript
-* Debugging and solving real-world development challenges
-
-
 
 ---
 
