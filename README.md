@@ -1,80 +1,62 @@
 # 🔐 Password Security Analyzer
 
-> A production-ready web application that analyzes password strength, estimates crack time, and provides actionable security feedback — built with a mobile-first, iOS-inspired interface.
+A Flask-based cybersecurity web application that analyzes password strength, estimates password crack time, and checks whether a password has appeared in known data breaches using the **Have I Been Pwned (HIBP) API**.
+
+I built this project to strengthen my Python, Flask, and cybersecurity skills while gaining experience designing, developing, and deploying a full-stack web application.
 
 🌐 **Live Demo:** https://password-analyzer-yoap.onrender.com/
-📦 **Repository:** https://github.com/WhiteHatAnalystMike/Password-Security-Analyzer
+
+📦 **GitHub Repository:** https://github.com/WhiteHatAnalystMike/Password-Security-Analyzer
 
 ---
 
-## ✨ Overview
+# Overview
 
-The Password Security Analyzer is a full-stack web application designed to simulate real-world password security evaluation. It helps users understand how secure their passwords are by combining scoring logic, crack-time estimation, and user-friendly feedback.
+Weak passwords continue to be one of the most common causes of compromised accounts. The goal of this project is to help users better understand the security of their passwords by providing real-time analysis, estimating how long a password would take to crack, and checking whether it has appeared in publicly known data breaches.
 
-This project emphasizes both **cybersecurity fundamentals** and **modern UI/UX design**, delivering a tool that is both functional and intuitive.
-
----
-
-## 🎯 Key Features
-
-* 🔍 **Real-Time Password Strength Analysis**
-* ⏱️ **Estimated Crack Time Calculation**
-* 🧠 **Context-Aware Security Feedback**
-* 🌙 **Dark Mode (Persistent via Local Storage)**
-* 📱 **Mobile-First iOS-Style UI**
-* ⚡ **Lightweight & Fast Flask Backend**
-* 🔄 **Interactive UX with Dynamic Updates**
+While building this application, I focused on writing clean, organized code, integrating external APIs, and creating an interface that is both responsive and easy to use.
 
 ---
 
-## 🧠 Engineering Highlights
+# Features
 
-* Designed a **rule-based scoring algorithm** to evaluate password strength
-* Implemented **secure handling of user input** (no storage of sensitive data)
-* Built a **responsive UI system** mimicking native iOS design patterns
-* Integrated **state persistence** using `localStorage` for theme preference
-* Structured application using **modular Flask architecture**
-
----
-
-## 🏗️ System Architecture
-
-```text
-User Input (Browser)
-        ↓
-Flask Backend (main.py)
-        ↓
-Password Analysis Engine (analyzer.py)
-        ↓
-Rendered UI (Jinja Templates)
-```
+* Password strength analysis
+* Password crack-time estimation
+* Have I Been Pwned (HIBP) breach detection
+* Personalized security recommendations
+* Responsive design for desktop and mobile devices
+* Dark mode with saved user preferences
+* Fast Flask backend with dynamic page updates
 
 ---
 
-## 🛠️ Tech Stack
+# Technologies Used
 
-| Layer      | Technology                          |
-| ---------- | ----------------------------------- |
-| Backend    | Python, Flask                       |
-| Frontend   | HTML, CSS (Custom iOS-style design) |
-| Deployment | Render                              |
-| Versioning | Git & GitHub                        |
+| Category        | Technology            |
+| --------------- | --------------------- |
+| Language        | Python                |
+| Framework       | Flask                 |
+| Frontend        | HTML, CSS, JavaScript |
+| API             | Have I Been Pwned API |
+| Deployment      | Render                |
+| Version Control | Git & GitHub          |
 
 ---
 
-## 📂 Project Structure
+# Project Structure
 
 ```text
 Password-Security-Analyzer/
 │
-├── passwordanalyzer/
-│   ├── main.py          # Flask app entry point
-│   ├── analyzer.py      # Password scoring logic
-│   ├── templates/
-│   │   └── index.html   # UI layout
-│   ├── static/
-│   │   └── style.css    # iOS-style UI styling
+├── static/
+│   └── style.css
 │
+├── templates/
+│   └── index.html
+│
+├── analyzer.py
+├── breach_checker.py
+├── main.py
 ├── requirements.txt
 ├── .gitignore
 └── README.md
@@ -82,103 +64,106 @@ Password-Security-Analyzer/
 
 ---
 
-## ⚙️ Local Development
+# Running the Project
 
-### 1. Clone repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/WhiteHatAnalystMike/Password-Security-Analyzer.git
+```
+
+Move into the project directory:
+
+```bash
 cd Password-Security-Analyzer
 ```
 
-### 2. Setup environment
+Create a virtual environment:
 
 ```bash
 python -m venv .venv
-.venv\Scripts\activate   # Windows
 ```
 
-### 3. Install dependencies
+Activate the virtual environment.
+
+**Windows**
+
+```bash
+.venv\Scripts\activate
+```
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run application
+Run the application:
 
 ```bash
-python passwordanalyzer/main.py
+python main.py
 ```
 
-### 5. Open in browser
+Open your browser and navigate to:
 
-```
+```text
 http://127.0.0.1:5000
 ```
 
 ---
 
-## 🔒 Security Concepts Demonstrated
+# Security Concepts Demonstrated
 
-* Password strength heuristics
-* Brute-force attack modeling
-* Crack-time estimation logic
-* Secure input handling (no persistence of sensitive data)
-* User-centered security design
+This project demonstrates several cybersecurity concepts, including:
 
----
-
-## 📸 Demo Preview
-
-> *(Add a screenshot or GIF here — this is HUGE for recruiters)*
+* Password strength evaluation
+* Password complexity analysis
+* Crack-time estimation
+* Secure handling of user input
+* Password breach detection using the Have I Been Pwned API
+* The HIBP k-Anonymity model, which allows passwords to be checked without transmitting the complete password
 
 ---
 
-## 🚀 Deployment
+# What I Learned
 
-This application is deployed on Render using a Python web service.
+Developing this project gave me experience with:
 
-Key deployment considerations:
-
-* Bound Flask to `0.0.0.0` for external access
-* Used environment-based port configuration
-* Managed dependencies via `requirements.txt`
-
----
-
-## 📈 Future Enhancements
-
-* Integrate **HaveIBeenPwned API** for breach detection
-* Implement **entropy-based scoring algorithm**
-* Add **user authentication & saved history**
-* Introduce **real-time animations & transitions**
-* Expand into a **full cybersecurity toolkit**
+* Building full-stack web applications using Flask
+* Organizing Python projects into reusable modules
+* Working with REST APIs
+* Deploying Python applications to Render
+* Using Git and GitHub for version control
+* Applying cybersecurity concepts in a practical application
+* Improving user experience through responsive web design
 
 ---
 
-## 👤 Author
+# Future Improvements
+
+Some features I plan to add include:
+
+* Secure password generator
+* Password entropy calculations
+* Password history comparison
+* Exportable security reports
+* Additional cybersecurity tools and utilities
+
+---
+
+# About Me
 
 **Michael Koranteng**
-Computer Science Student | Aspiring Cybersecurity Engineer
+
+Computer Science student at Towson University with an interest in cybersecurity, software engineering, and secure application development.
+
+GitHub: https://github.com/WhiteHatAnalystMike
 
 ---
 
-## ⭐️ Impact
+# Why I Built This Project
 
-This project demonstrates:
+I built this application to improve my software development skills while learning more about password security and API integration. My goal was to create a practical cybersecurity tool that combines secure programming practices with a clean and user-friendly interface.
 
-* Full-stack development capability
-* Deployment & DevOps understanding
-* UI/UX design awareness
-* Cybersecurity fundamentals
+If you have any suggestions or feedback, feel free to open an issue or reach out.
 
----
-
-## 📌 Why This Project Matters
-
-Weak passwords remain one of the most common security vulnerabilities.
-This tool bridges the gap between **technical security concepts** and **user-friendly design**, helping users make better security decisions in real time.
-
----
-
-⭐️ If you found this useful, consider starring the repository.
